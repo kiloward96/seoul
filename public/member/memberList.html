@@ -5,164 +5,238 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>사용자 리스트</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	<style type="text/css">
-		th, td {
-			text-align: center;
-		}
-	</style>
+<style type="text/css">
+th, td {
+	text-align: center;
+}
+</style>
+
 </head>
 <body>
-
-	<!-- start -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container-fluid">
-			<a class="navbar-brand">K cooperation</a>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
-					<a class="nav-link active" aria-current="page" href="#">사용자관리</a>
-					<a class="nav-link" href="#">통계</a>
-					<a class="nav-link" href="#">설정</a>
+	<div class="bg-dark">
+		<!-- start -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand">K coooperation</a>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" aria-current="page" href="#">코드그룹관리</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">코드관리</a></li>
+						<li class="nav-item"><a class="nav-link active" href="#">회원관리</a></li>
+					</ul>
+					<form class="d-flex">
+						<button class="btn btn-outline-light m-2" type="button"><i class="fa-solid fa-user"></i> admin</button>
+						<button class="btn btn-outline-secondary m-2" type="submit">Log Out</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container-fluied">
+			<div class="p-2" style="float: left;">
+				<div id="accordion">
+					<div class="accodion-item">
+						<div class="accordion-header">
+							<button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseOne" type="button">
+								<i class="fa-solid fa-bars"></i> 상세검색
+							</button>
+						</div>
+						<div class="accordion-collapse collapse" id="collapseOne" data-parent="#accordion">
+							<div class="arrcodion-body p-2">
+								<div class="d-flex p-2">
+									<select class="form-select m-1">
+										<option selected>검색조건 1</option>
+										<option value="1">이름</option>
+										<option value="2">ID</option>
+										<option value="3">등급</option>
+										<option value="4">Email</option>
+									</select>
+									<input class="form-control m-1" type="search" placeholder="키워드">
+									<select class="form-select m-1">
+										<option selected>검색조건 2</option>
+										<option value="1">이름</option>
+										<option value="2">ID</option>
+										<option value="3">등급</option>
+										<option value="4">Email</option>
+									</select>
+									<input class="form-control m-1" type="search" placeholder="키워드">
+									<select class="form-select m-1">
+										<option selected>검색조건 3</option>
+										<option value="1">이름</option>
+										<option value="2">ID</option>
+										<option value="3">등급</option>
+										<option value="4">Email</option>
+									</select>
+									<input class="form-control m-1" type="search" placeholder="키워드">
+									<select class="form-select m-1">
+										<option selected>검색조건 4</option>
+										<option value="1">이름</option>
+										<option value="2">ID</option>
+										<option value="3">등급</option>
+										<option value="4">Email</option>
+									</select>
+									<input class="form-control m-1" type="search" placeholder="키워드">
+									<div class="col m-1 bg-dark" style="line-height: 10px;">
+										<button class="btn btn-outline-light" type="submit" style="width: 120px;">
+											<i class="fa-brands fa-searchengin"></i> 통합검색
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="float: right;">
+				<div class="col-8 p-2 bg-dark">
+					<input class="form-control" type="search" placeholder="ID를 입력하세요">
+				</div>
+				<div class="col p-2 bg-dark">
+					<button class="btn btn-outline-light" type="submit">
+						<i class="fa-solid fa-magnifying-glass"></i> 검색
+					</button>
 				</div>
 			</div>
 		</div>
-	</nav>
-	<div class="row bg-dark d-flex flex-row justify-content-end" role="search">
-		<input class="col" type="hidden">
-		<input class="col-4 form-control" type="search" placeholder="이름을 입력하세요">
-		<button class="col-1 btn btn-outline-light me-2" type="submit">🔍 검색</button>
-		<button class="col-1 btn btn-outline-light me-2" type="button">☰ 상세검색</button>
+		<div class="row" style="clear: both;">
+			<div class="d-flex">
+				<button type="button" class="btn btn-outline-success m-2">
+					<i class="fa-solid fa-circle-plus"></i> 추가
+				</button>
+				<button type="button" class="btn btn-outline-warning m-2">
+					<i class="fa-solid fa-pen-to-square"></i> 수정
+				</button>
+				<button type="button" class="btn btn-outline-danger m-2">
+					<i class="fa-solid fa-circle-minus"></i> 삭제
+				</button>
+			</div>
+		</div>
 	</div>
-	<table class="table table-light table-bordered" id="userList">
-		<thead>
-			<tr class="table table-dark">
-				<th scope="col">No</th>
-				<th scope="col">이름</th>
-				<th scope="col">ID</th>
-				<th scope="col">성별</th>
-				<th scope="col">생년월일</th>
-				<th scope="col">Email</th>
-				<th scope="col">mobile</th>
-				<th scope="col">가입일</th>
-				<th scope="col">관리자권한</th>
-				<th scope="col">탈퇴여부</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="col">1</th>
-				<td scope="col">김기역</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>이니은</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td>박디귿</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th scope="row">4</th>
-				<td>최리을</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th scope="row">5</th>
-				<td>정미음</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th scope="row">6</th>
-				<td>강비읍</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th scope="row">7</th>
-				<td>조이응</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="row">
+		<table class="table table-light table-bordered table-hover" id="userList">
+			<thead>
+				<tr class="table table-dark">
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck" onclick="selectAll(this);"></th>
+					<th scope="col">No</th>
+					<th scope="col">이름</th>
+					<th scope="col">ID</th>
+					<th scope="col">성별</th>
+					<th scope="col">생년월일</th>
+					<th scope="col">Email</th>
+					<th scope="col">mobile</th>
+					<th scope="col">가입일</th>
+					<th scope="col">등급</th>
+					<th scope="col">탈퇴여부</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+					<th scope="col">1</th>
+					<td scope="col">김기역</td>
+					<td>giyock01</td>
+					<td>male</td>
+					<td>19960101</td>
+					<td>giyock01@naver.com</td>
+					<td>01011112222</td>
+					<td>20220713</td>
+					<td>user</td>
+					<td>N</td>
+				</tr>
+				<tr>
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+					<th scope="row">2</th>
+					<td>이니은</td>
+					<td>nieun02</td>
+					<td>female</td>
+					<td>19970303</td>
+					<td>nieun02@naver.com</td>
+					<td>01011113333</td>
+					<td>20220713</td>
+					<td>user</td>
+					<td>N</td>
+				</tr>
+				<tr>
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+					<th scope="row">3</th>
+					<td>박디귿</td>
+					<td>digoot03</td>
+					<td>male</td>
+					<td>19950203</td>
+					<td>digoot03@naver.com</td>
+					<td>01011114433</td>
+					<td>20220713</td>
+					<td>admin</td>
+					<td>N</td>
+				</tr>
+				<tr>
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+					<th scope="row">4</th>
+					<td>최리을</td>
+					<td>giyock04</td>
+					<td>male</td>
+					<td>19980101</td>
+					<td>giyock01@naver.com</td>
+					<td>01011112222</td>
+					<td>20220713</td>
+					<td>user</td>
+					<td>N</td>
+				</tr>
+				<tr>
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+					<th scope="row">5</th>
+					<td>정미음</td>
+					<td>giyock05</td>
+					<td>male</td>
+					<td>19990101</td>
+					<td>giyock01@naver.com</td>
+					<td>01011112222</td>
+					<td>20220713</td>
+					<td>user</td>
+					<td>N</td>
+				</tr>
+				<tr>
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+					<th scope="row">6</th>
+					<td>강비읍</td>
+					<td>giyock06</td>
+					<td>male</td>
+					<td>19920101</td>
+					<td>giyock01@naver.com</td>
+					<td>01011112222</td>
+					<td>20220713</td>
+					<td>user</td>
+					<td>N</td>
+				</tr>
+				<tr>
+					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+					<th scope="row">7</th>
+					<td>조이응</td>
+					<td>giyock07</td>
+					<td>male</td>
+					<td>19960101</td>
+					<td>giyock01@naver.com</td>
+					<td>01011112222</td>
+					<td>20220713</td>
+					<td>user</td>
+					<td>N</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-
-
+	<div></div>
 	<nav aria-label="Page navigation" class="nav justify-content-center">
-		<ul class="pagination border">
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="first">
-					<span aria-hidden="true">&laquo;</span>
-				</a>
-			</li>
-			</li class="page-item">
-				<a class="page-link" href="#" aria-label="Previous">
-					<span aria-hidden="true">&lt;</span>
-				</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">1</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">2</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">3</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Next">
-					<span aria-hidden="true">&gt;</span>
-				</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="last">
-					<span aria-hidden="true">&raquo;</span>
-				</a>
-			</li>
+		<ul class="pagination pagination-dark">
+			<li class="page-item"><a class="page-link" href="#" aria-label="first"> <span aria-hidden="true">&laquo;</span>
+			</a></li>
+			<li class="page-item"><a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&lt;</span>
+			</a></li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&gt;</span>
+			</a></li>
+			<li class="page-item"><a class="page-link" href="#" aria-label="last"> <span aria-hidden="true">&raquo;</span>
+			</a></li>
 		</ul>
 	</nav>
 	<div id="footer"></div>
@@ -172,5 +246,13 @@
 	<!-- end -->
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/8d31d55045.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function selectAll(selectAll)  {
+			  const checkboxes = document.getElementsByName('flexCheck');
+		 			checkboxes.forEach((checkbox) => { checkbox.checked = selectAll.checked; 
+		 			})
+				}
+	</script>
 </body>
 </html>
