@@ -25,7 +25,9 @@ th, td {
 						<li class="nav-item"><a class="nav-link active" href="#">회원관리</a></li>
 					</ul>
 					<form class="d-flex">
-						<button class="btn btn-outline-light m-2" type="button"><i class="fa-solid fa-user"></i> admin</button>
+						<button class="btn btn-outline-light m-2" type="button">
+							<i class="fa-solid fa-user"></i> admin
+						</button>
 						<button class="btn btn-outline-warning m-2" type="submit">Log Out</button>
 					</form>
 				</div>
@@ -111,117 +113,119 @@ th, td {
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<table class="table table-light table-bordered table-hover" id="userList">
-			<thead>
-				<tr class="table table-dark">
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck" onclick="selectAll(this);"></th>
-					<th scope="col">No</th>
-					<th scope="col">이름</th>
-					<th scope="col">ID</th>
-					<th scope="col">성별</th>
-					<th scope="col">생년월일</th>
-					<th scope="col">Email</th>
-					<th scope="col">mobile</th>
-					<th scope="col">가입일</th>
-					<th scope="col">등급</th>
-					<th scope="col">탈퇴여부</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
-					<th scope="col">1</th>
-					<td scope="col">김기역</td>
-					<td>giyock01</td>
-					<td>male</td>
-					<td>19960101</td>
-					<td>giyock01@naver.com</td>
-					<td>01011112222</td>
-					<td>20220713</td>
-					<td>user</td>
-					<td>N</td>
-				</tr>
-				<tr>
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
-					<th scope="row">2</th>
-					<td>이니은</td>
-					<td>nieun02</td>
-					<td>female</td>
-					<td>19970303</td>
-					<td>nieun02@naver.com</td>
-					<td>01011113333</td>
-					<td>20220713</td>
-					<td>user</td>
-					<td>N</td>
-				</tr>
-				<tr>
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
-					<th scope="row">3</th>
-					<td>박디귿</td>
-					<td>digoot03</td>
-					<td>male</td>
-					<td>19950203</td>
-					<td>digoot03@naver.com</td>
-					<td>01011114433</td>
-					<td>20220713</td>
-					<td>admin</td>
-					<td>N</td>
-				</tr>
-				<tr>
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
-					<th scope="row">4</th>
-					<td>최리을</td>
-					<td>giyock04</td>
-					<td>male</td>
-					<td>19980101</td>
-					<td>giyock01@naver.com</td>
-					<td>01011112222</td>
-					<td>20220713</td>
-					<td>user</td>
-					<td>N</td>
-				</tr>
-				<tr>
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
-					<th scope="row">5</th>
-					<td>정미음</td>
-					<td>giyock05</td>
-					<td>male</td>
-					<td>19990101</td>
-					<td>giyock01@naver.com</td>
-					<td>01011112222</td>
-					<td>20220713</td>
-					<td>user</td>
-					<td>N</td>
-				</tr>
-				<tr>
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
-					<th scope="row">6</th>
-					<td>강비읍</td>
-					<td>giyock06</td>
-					<td>male</td>
-					<td>19920101</td>
-					<td>giyock01@naver.com</td>
-					<td>01011112222</td>
-					<td>20220713</td>
-					<td>user</td>
-					<td>N</td>
-				</tr>
-				<tr>
-					<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
-					<th scope="row">7</th>
-					<td>조이응</td>
-					<td>giyock07</td>
-					<td>male</td>
-					<td>19960101</td>
-					<td>giyock01@naver.com</td>
-					<td>01011112222</td>
-					<td>20220713</td>
-					<td>user</td>
-					<td>N</td>
-				</tr>
-			</tbody>
-		</table>
+	<div class="container">
+		<div class="row">
+			<table class="table table-light table-bordered table-hover" id="userList">
+				<thead>
+					<tr class="table table-dark">
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck" onclick="selectAll(this);"></th>
+						<th scope="col">No</th>
+						<th scope="col">이름</th>
+						<th scope="col">ID</th>
+						<th scope="col">성별</th>
+						<th scope="col">생년월일</th>
+						<th scope="col">Email</th>
+						<th scope="col">mobile</th>
+						<th scope="col">가입일</th>
+						<th scope="col">등급</th>
+						<th scope="col">탈퇴여부</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="col">1</th>
+						<td scope="col">김기역</td>
+						<td>giyock01</td>
+						<td>male</td>
+						<td>19960101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">2</th>
+						<td>이니은</td>
+						<td>nieun02</td>
+						<td>female</td>
+						<td>19970303</td>
+						<td>nieun02@naver.com</td>
+						<td>01011113333</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">3</th>
+						<td>박디귿</td>
+						<td>digoot03</td>
+						<td>male</td>
+						<td>19950203</td>
+						<td>digoot03@naver.com</td>
+						<td>01011114433</td>
+						<td>20220713</td>
+						<td>admin</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">4</th>
+						<td>최리을</td>
+						<td>giyock04</td>
+						<td>male</td>
+						<td>19980101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">5</th>
+						<td>정미음</td>
+						<td>giyock05</td>
+						<td>male</td>
+						<td>19990101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">6</th>
+						<td>강비읍</td>
+						<td>giyock06</td>
+						<td>male</td>
+						<td>19920101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">7</th>
+						<td>조이응</td>
+						<td>giyock07</td>
+						<td>male</td>
+						<td>19960101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	<div></div>
 	<nav aria-label="Page navigation" class="nav justify-content-center">
