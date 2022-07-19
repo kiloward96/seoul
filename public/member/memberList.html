@@ -33,54 +33,56 @@ th, td {
 				</div>
 			</div>
 		</nav>
-		<div class="container-fluied">
-			<div class="p-2" style="float: left;">
-				<div id="accordion">
-					<div class="accodion-item">
-						<div class="accordion-header">
-							<button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseOne" type="button">
-								<i class="fa-solid fa-bars"></i> 상세검색
-							</button>
-						</div>
-						<div class="accordion-collapse collapse" id="collapseOne" data-parent="#accordion">
-							<div class="arrcodion-body p-2">
-								<div class="d-flex p-2">
-									<select class="form-select m-1">
-										<option selected>검색조건 1</option>
-										<option value="1">이름</option>
-										<option value="2">ID</option>
-										<option value="3">등급</option>
-										<option value="4">Email</option>
-									</select>
-									<input class="form-control m-1" type="search" placeholder="키워드">
-									<select class="form-select m-1">
-										<option selected>검색조건 2</option>
-										<option value="1">이름</option>
-										<option value="2">ID</option>
-										<option value="3">등급</option>
-										<option value="4">Email</option>
-									</select>
-									<input class="form-control m-1" type="search" placeholder="키워드">
-									<select class="form-select m-1">
-										<option selected>검색조건 3</option>
-										<option value="1">이름</option>
-										<option value="2">ID</option>
-										<option value="3">등급</option>
-										<option value="4">Email</option>
-									</select>
-									<input class="form-control m-1" type="search" placeholder="키워드">
-									<select class="form-select m-1">
-										<option selected>검색조건 4</option>
-										<option value="1">이름</option>
-										<option value="2">ID</option>
-										<option value="3">등급</option>
-										<option value="4">Email</option>
-									</select>
-									<input class="form-control m-1" type="search" placeholder="키워드">
-									<div class="col m-1 bg-dark" style="line-height: 10px;">
-										<button class="btn btn-outline-light" type="submit" style="width: 120px;">
-											<i class="fa-brands fa-searchengin"></i> 통합검색
-										</button>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container-fluied">
+				<div class="navbar-brand row p-2">
+					<div id="accordion" style="float: left;">
+						<div class="accodion-item">
+							<div class="accordion-header">
+								<button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseOne" type="button">
+									<i class="fa-solid fa-bars"></i> 상세검색
+								</button>
+							</div>
+							<div class="accordion-collapse collapse link-active" id="collapseOne" data-parent="#accordion">
+								<div class="arrcodion-body p-2">
+									<div class="d-flex p-2">
+										<select class="form-select m-1">
+											<option selected>검색조건 1</option>
+											<option value="1">이름</option>
+											<option value="2">ID</option>
+											<option value="3">등급</option>
+											<option value="4">Email</option>
+										</select>
+										<input class="form-control m-1" type="search" placeholder="키워드">
+										<select class="form-select m-1">
+											<option selected>검색조건 2</option>
+											<option value="1">이름</option>
+											<option value="2">ID</option>
+											<option value="3">등급</option>
+											<option value="4">Email</option>
+										</select>
+										<input class="form-control m-1" type="search" placeholder="키워드">
+										<select class="form-select m-1">
+											<option selected>검색조건 3</option>
+											<option value="1">이름</option>
+											<option value="2">ID</option>
+											<option value="3">등급</option>
+											<option value="4">Email</option>
+										</select>
+										<input class="form-control m-1" type="search" placeholder="키워드">
+										<select class="form-select m-1">
+											<option selected>검색조건 4</option>
+											<option value="1">이름</option>
+											<option value="2">ID</option>
+											<option value="3">등급</option>
+											<option value="4">Email</option>
+										</select>
+										<input class="form-control m-1" type="search" placeholder="키워드">
+										<div class="col m-1 bg-dark" style="line-height: 10px;">
+											<button class="btn btn-outline-light" type="submit" style="width: 120px;">
+												<i class="fa-brands fa-searchengin"></i> 통합검색
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -88,7 +90,7 @@ th, td {
 					</div>
 				</div>
 			</div>
-			<div class="row" style="float: right;">
+			<div class="row">
 				<div class="col-8 p-2 bg-dark">
 					<input class="form-control" type="search" placeholder="ID를 입력하세요">
 				</div>
@@ -98,22 +100,9 @@ th, td {
 					</button>
 				</div>
 			</div>
-		</div>
-		<div class="row" style="clear: both;">
-			<div class="d-flex">
-				<button type="button" class="btn btn-outline-success m-2">
-					<i class="fa-solid fa-circle-plus"></i> 추가
-				</button>
-				<button type="button" class="btn btn-outline-warning m-2">
-					<i class="fa-solid fa-pen-to-square"></i> 수정
-				</button>
-				<button type="button" class="btn btn-outline-danger m-2">
-					<i class="fa-solid fa-circle-minus"></i> 삭제
-				</button>
-			</div>
-		</div>
+		</nav>
 	</div>
-	<div class="container">
+	<div class="container" style="clear: both;">
 		<div class="row">
 			<table class="table table-light table-bordered table-hover" id="userList">
 				<thead>
@@ -243,6 +232,21 @@ th, td {
 			</a></li>
 		</ul>
 	</nav>
+	<div class="container">
+	<div class="row" style="float: right;">
+		<div class="d-flex">
+			<button type="button" class="btn btn-outline-success m-2">
+				<i class="fa-solid fa-circle-plus"></i> 추가
+			</button>
+			<button type="button" class="btn btn-outline-warning m-2">
+				<i class="fa-solid fa-pen-to-square"></i> 수정
+			</button>
+			<button type="button" class="btn btn-outline-danger m-2">
+				<i class="fa-solid fa-circle-minus"></i> 삭제
+			</button>
+		</div>
+	</div>
+	</div>
 	<div id="footer"></div>
 
 
