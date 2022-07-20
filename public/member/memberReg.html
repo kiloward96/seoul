@@ -26,10 +26,6 @@
 #user_profile_img {
 	visibility: hidden;
 }
-
-#user_img {
-	
-}
 </style>
 
 </head>
@@ -43,7 +39,7 @@
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">회원관리</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">물품관리</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Q&A관리</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">FAQ관리</a></li>
 				</ul>
 				<form class="d-flex">
 					<button class="btn btn-outline-light m-2" type="button">
@@ -56,41 +52,49 @@
 	</nav>
 
 	<div class="container">
-		<div class="text-center fs-1 fw-bold p-4">회원가입</div>
-		<div class="row border bg-body rounded p-1 shadow-sm">
-			<div class="col p-3 text-center">관심 카테고리</div>
-			<div class="col p-2">
-				<select class="form-select">
-					<option selected>권한 선택</option>
-					<option value="1">일반사용자</option>
-					<option value="2">관리자</option>
-					<option value="3">판매자</option>
-				</select>
+		<div class="text-center fs-1 fw-bold p-4">회원등록</div>
+		<div class="row border bg-body shadow-sm rounded p-3">
+			<div class="col-2 p-3 text-center">관심 카테고리</div>
+			<div class="col-1 p-3" style="width: 300px;">
+				<input class="form-check-input" type="checkbox" name="flexCheck">
+				공예
+				<input class="form-check-input" type="checkbox" name="flexCheck">
+				야외
+				<input class="form-check-input" type="checkbox" name="flexCheck">
+				주류
+				<input class="form-check-input" type="checkbox" name="flexCheck">
+				건강
 			</div>
 			<div class="col p-3 text-center">사용 권한</div>
-			<div class="col p-2">
+			<div class="col p-2" style="width: 150px;">
 				<select class="form-select">
-					<option selected>권한 선택</option>
+					<option selected>선택</option>
 					<option value="1">일반사용자</option>
 					<option value="2">관리자</option>
-					<option value="3">판매자</option>
 				</select>
 			</div>
-			<div class="col p-3 text-center">성별</div>
-			<div class="col p-2">
-				<input class="form-control" type="text" placeholder="ID 입력" id="ID">
+			<div class="col-2 p-3 text-center">성별</div>
+			<div class="col p-3">
+				<div class="col form-check-inline">
+					<input class="form-check-input" type="radio" name="radioGender" id="man">
+					<label class="form-check-label" for="flexRadioDefault1">남</label>
+				</div>
+				<div class="col form-check-inline">
+					<input class="form-check-input" type="radio" name="radioGender" id="woman">
+					<label class="form-check-label" for="flexRadioDefault2">여</label>
+				</div>
 			</div>
 		</div>
 	</div>
 	<br>
-	<div class="container border bg-body rounded shadow p-3">
+	<div class="container border bg-body rounded shadow p-4">
 		<div class="fw-bold">□ 기본정보</div>
 		<div class="col text-center" id="img_form" style="float: left; width: 180px; height: 300px;">
-			<label for="user_profile_img" class="fa-solid fa-file-image fa-5x" id="user_image"></label>
+			<label for="user_profile_img" class="fa-solid fa-file-image fa-5x" id="user_image" style="cursor: pointer;"></label>
 			<input type="file" id="user_profile_img">
 		</div>
 		<div class="row">
-			<div class="col-2 p-3 text center">아이디</div>
+			<div class="col-2 p-3">아이디</div>
 			<div class="col p-2">
 				<input class="form-control" type="text" placeholder="ID 입력" id="ID">
 			</div>
@@ -123,8 +127,8 @@
 		<div class="row">
 			<div class="col-2 p-3 text center">우편번호</div>
 			<div class="col p-2 d-flex align-items-center">
-				<input class="form-control w-35" type="text" placeholder="Post Number" id="postNumber">
-				<button class="btn btn-primary" type="button" style="float: right;">Find</button>
+					<input class="form-control" type="text" placeholder="Post Number" id="postNumber">
+					<button class="btn btn-primary" type="button" style="float: right;">Find</button>
 			</div>
 			<div class="col-2 p-3 text center">주소</div>
 			<div class="col p-2">
@@ -146,7 +150,7 @@
 					<i class="fa-solid fa-floppy-disk"></i> 저장
 				</button>
 				<button type="button" class="btn btn-outline-danger m-2">
-					<i class="fa-solid fa-circle-minus"></i> 삭제
+					<i class="fa-solid fa-xmark"></i> 취소
 				</button>
 			</div>
 		</div>
