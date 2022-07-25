@@ -146,42 +146,28 @@
 	<div class="container">
 		<div class="row" style="float: right;">
 			<div class="col">
-				<button type="button" class="btn btn-outline-success m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+				<button type="button" class="btn btn-outline-success m-2" onclick="alert_success()">
 					<i class="fa-solid fa-floppy-disk"></i> 저장
 				</button>
-				
-				<button type="button" class="btn btn-outline-danger m-2">
-						<i class="fa-solid fa-xmark"></i> 취소
-					</button>
 
-				<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="staticBackdropLabel">데이터 삭제 경고알림</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-							</div>
-							<div class="modal-body">정말 삭제하시겠습니까?</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" onclick="location.href='./memberList.html'">Yes</button>
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-							</div>
-						</div>
-					</div>
-					
-				</div>
+				<button type="button" class="btn btn-outline-danger m-2">
+					<i class="fa-solid fa-xmark"></i> 취소
+				</button>
+
+
 			</div>
+		</div>
 			<!-- end -->
 
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 			<script src="https://kit.fontawesome.com/8d31d55045.js" crossorigin="anonymous"></script>
 			<script type="text/javascript">
-				function alert_success() {
-					if (confirm("저장하시겠습니까?") == true) {
-						alert("저장되었습니다.")
-						location = "./recruitView.html";
-					}
-				}
+			function alert_success() {
+				location = "./memberMod.html";
+			}
+			function alert_cancel() {
+				location = "./memberList.html";
+			}
 			</script>
 </body>
 </html>
