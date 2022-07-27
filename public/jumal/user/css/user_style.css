@@ -1,8 +1,14 @@
 @charset "UTF-8";
-h1 {
+h1:not(.title) {
 	font-weight: bold;
-	text-align: center;
 	padding-top: 3em;
+}
+.title {
+	font-weight: bold;
+	padding-top: 1em;
+}
+h4 {
+	font-weight: bold;
 }
 a {
 	text-align: center;
@@ -14,14 +20,47 @@ div {
 .bg_box {
 	width: 40%;
 }
+.bg_box2 {
+	width: 80%;
+}
 .sns-btn {
 	margin: 5px;
 	width: 50%;
-	text-align: left;
 }
 .sns-logo {
 	margin-right: 20px;
 }
 body {
 	background-color: #c4e4f9;
+}
+.alert_subtext:not(.mobile) {
+	font-size: 13px;
+	color: #F39C12;
+	font-weight: bold;
+	padding-left: 24em;
+}
+.email_subtext {
+	font-size: 14px;
+	color: #5e5e5e;
+	font-weight: bold;
+	padding-left: 24em;
+}
+.mobile {
+	font-size: 13px;
+	color: #F39C12;
+	font-weight: bold;
+	padding-left: 23em;
+}
+
+.form-floating:not(.mobile-box) {
+	width: 400px;
+}
+
+.mobile-box {
+	width: 275px;
+}
+.mobile-btn {
+	width: 100px;
+	height: 58px;
+	font-weight: bold;
 }
