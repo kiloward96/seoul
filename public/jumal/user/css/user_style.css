@@ -2,10 +2,12 @@
 h1:not(.title) {
 	font-weight: bold;
 	padding-top: 3em;
+	text-align: center;
 }
 .title {
 	font-weight: bold;
 	padding-top: 1em;
+	text-align: center;
 }
 h4 {
 	font-weight: bold;
@@ -13,7 +15,7 @@ h4 {
 a {
 	text-align: center;
 }
-div {
+div:not(#head, #navigation) {
 	display: flex;
 	justify-content: center;
 }
@@ -43,7 +45,6 @@ body {
 	font-size: 14px;
 	color: #5e5e5e;
 	font-weight: bold;
-	padding-left: 24em;
 }
 .mobile {
 	font-size: 13px;
@@ -63,4 +64,7 @@ body {
 	width: 100px;
 	height: 58px;
 	font-weight: bold;
+}
+.jumalLogo {
+	padding-right: 10em;
 }
