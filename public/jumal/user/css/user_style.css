@@ -16,9 +16,8 @@ h4 {
 a {
 	text-align: center;
 }
-div:not(#head, #navigation) {
+div:not(#navigation .top-button) {
 	display: flex;
-	justify-content: center;
 	font-family: 'Saira', sans-serif;
 }
 .bg_box {
@@ -52,9 +51,11 @@ body {
 	font-size: 13px;
 	color: #F39C12;
 	font-weight: bold;
-	padding-left: 23em;
 }
-
+label[for="confirm_emailAd"] {
+        position: relative;
+        top: -1px;
+      }
 .form-floating:not(.mobile-box) {
 	width: 400px;
 }
@@ -73,6 +74,11 @@ body {
 .top_serachBar {
 	width : 30em;
 }
-.categorys {
-	padding-left: 6em;
+ul.categorys {
+	margin-left: auto;
+	margin-right: auto;
+}
+li.categorys {
+	margin-left: 100px;
+	margin-right: 100px;
 }
