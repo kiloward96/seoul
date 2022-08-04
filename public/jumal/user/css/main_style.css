@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body {
+	background-color: #c4e4f9;
+	font-family: 'Saira', sans-serif;
+}
+.jumalLogo {
+	padding-right: 8em;
+}
+.top_serachBar {
+	width : 30em;
+}
+ul.categorys {
+	margin-left: auto;
+	margin-right: auto;
+}
+li.categorys {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+.top-button {
+	display: flex;
+	justify-content: end;
+}
+.carousel-inner {
+	width: 100%;
+}
