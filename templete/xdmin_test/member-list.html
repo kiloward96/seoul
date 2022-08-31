@@ -11,7 +11,7 @@
 
 <!-- Favicons -->
 <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-<link href="/resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -52,9 +52,9 @@
 			<form class="search-form d-flex align-items-center" method="POST" action="#">
 				<!--         <input type="text" name="query" placeholder="Search" title="Enter search keyword">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button> -->
-				<a href="page-code-list.html" class="code-title  d-flex align-items-center"> <span class="d-none d-lg-block nav-link active">코드 관리</span>
+				<a href="index.html" class="code-title  d-flex align-items-center"> <span class="d-none d-lg-block nav-link active">코드 관리</span>
 				</a>
-				<a href="page-codeGroup-list.html" class="code-title d-flex align-items-center"> <span class="d-none d-lg-block nav-link">코드 그룹 관리</span>
+				<a href="index.html" class="code-title d-flex align-items-center"> <span class="d-none d-lg-block nav-link">코드 그룹 관리</span>
 				</a>
 			</form>
 		</div>
@@ -378,119 +378,158 @@
 						<div class="card-body">
 							<div class="row mt-3 mb-3">
 							<div class="container" style="clear: both;">
-							<div class="d-flex p-2">
-										<select class="form-select m-1">
-											<option selected>검색조건 1</option>
-											<option value="1">코드 그룹 코드</option>
-											<option value="2">코드</option>
-											<option value="3">사용</option>
-											<option value="4">등록일</option>
-											<option value="5">수정일</option>
-										</select>
-										<input class="form-control m-1" type="search" placeholder="키워드">
-										<select class="form-select m-1">
-											<option selected>검색조건 2</option>
-											<option value="1">코드 그룹 코드</option>
-											<option value="2">코드</option>
-											<option value="3">사용</option>
-											<option value="4">등록일</option>
-											<option value="5">수정일</option>
-										</select>
-										<input class="form-control m-1" type="search" placeholder="키워드">
-										<select class="form-select m-1">
-											<option selected>검색조건 3</option>
-											<option value="1">코드 그룹 코드</option>
-											<option value="2">코드</option>
-											<option value="3">사용</option>
-											<option value="4">등록일</option>
-											<option value="5">수정일</option>
-										</select>
-										<input class="form-control m-1" type="search" placeholder="키워드">
-										<select class="form-select m-1">
-											<option selected>검색조건 4</option>
-											<option value="1">코드 그룹 코드</option>
-											<option value="2">코드</option>
-											<option value="3">사용</option>
-											<option value="4">등록일</option>
-											<option value="5">수정일</option>
-										</select>
-										<input class="form-control m-1" type="search" placeholder="키워드">
-										<div class="col m-1" style="line-height: 10px;">
-											<button class="btn btn-primary" type="submit" style="width: 120px;">
-												<i class="fa-brands fa-searchengin"></i> 통합검색
-											</button>
-										</div>
-									</div>
 		<div class="row">
 			<table class="table table-light table-hover" id="userList">
 				<thead>
 					<tr class="table">
 						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck" onclick="selectAll(this);"></th>
 						<th scope="col">No</th>
-						<th scope="col">코드 그룹 코드</th>
-						<th scope="col">코드 그룹 코드 이름 (한글)</th>
-						<th scope="col">코드</th>
-						<th scope="col">대체 코드</th>
-						<th scope="col">코드 이름 (한글)</th>
-						<th scope="col">코드 이름 (영문)</th>
-						<th scope="col">사용</th>
-						<th scope="col">순서</th>
-						<th scope="col">등록일</th>
-						<th scope="col">수정일</th>
+						<th scope="col">이름</th>
+						<th scope="col">ID</th>
+						<th scope="col">성별</th>
+						<th scope="col">생년월일</th>
+						<th scope="col">Email</th>
+						<th scope="col">mobile</th>
+						<th scope="col">가입일</th>
+						<th scope="col">등급</th>
+						<th scope="col">탈퇴여부</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr style="cursor: pointer;">
+					<tr onclick="location.href='./memberMod.html'" style="cursor: pointer;">
 						<th scope="col" onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
 						<th scope="col">1</th>
-						<td>1</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td scope="col">김기역</td>
+						<td>giyock01</td>
+						<td>male</td>
+						<td>19960101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">2</th>
+						<td>이니은</td>
+						<td>nieun02</td>
+						<td>female</td>
+						<td>19970303</td>
+						<td>nieun02@naver.com</td>
+						<td>01011113333</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">3</th>
+						<td>박디귿</td>
+						<td>digoot03</td>
+						<td>male</td>
+						<td>19950203</td>
+						<td>digoot03@naver.com</td>
+						<td>01011114433</td>
+						<td>20220713</td>
+						<td>admin</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">4</th>
+						<td>최리을</td>
+						<td>giyock04</td>
+						<td>male</td>
+						<td>19980101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">5</th>
+						<td>정미음</td>
+						<td>giyock05</td>
+						<td>male</td>
+						<td>19990101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">6</th>
+						<td>강비읍</td>
+						<td>giyock06</td>
+						<td>male</td>
+						<td>19920101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">7</th>
+						<td>조이응</td>
+						<td>giyock07</td>
+						<td>male</td>
+						<td>19960101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">8</th>
+						<td>조이응</td>
+						<td>giyock07</td>
+						<td>male</td>
+						<td>19960101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">9</th>
+						<td>조이응</td>
+						<td>giyock07</td>
+						<td>male</td>
+						<td>19960101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<th scope="col"><input class="form-check-input" type="checkbox" name="flexCheck"></th>
+						<th scope="row">10</th>
+						<td>조이응</td>
+						<td>giyock07</td>
+						<td>male</td>
+						<td>19960101</td>
+						<td>giyock01@naver.com</td>
+						<td>01011112222</td>
+						<td>20220713</td>
+						<td>user</td>
+						<td>N</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
-		<div class="container">
-		<div class="row">
-			<div class="col">
-				<button type="button" class="btn btn-outline-danger m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-					<i class="fa-solid fa-circle-minus"></i> 삭제
-				</button>
-
-				<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="staticBackdropLabel">데이터 삭제 경고알림</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-							</div>
-							<div class="modal-body">정말 삭제하시겠습니까?</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" onclick="location.href='./memberList.html'">Yes</button>
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col d-flex justify-content-end">
-				<button type="button" class="btn btn-outline-success m-2" onclick="location.href='./memberReg.html'">
-					<i class="fa-solid fa-circle-plus"></i> 추가
-				</button>
-				
-				<button type="button" class="btn btn-outline-warning m-2">
-					<i class="fa-solid fa-pen-to-square"></i> 수정
-				</button>
-			</div>
-		</div>
 							</div>
 						</div>
 					</div>
