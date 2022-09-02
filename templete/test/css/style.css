@@ -3450,8 +3450,7 @@ footer h6 {
 	letter-spacing: 1.5px;
 }
 footer {
-	padding: 50px 0;
-	padding-bottom: 60px;
+	padding: 35px 0;
 	background: #171e27;
 	position: relative;
 	z-index: 1;
@@ -3461,7 +3460,7 @@ footer {
 	display: inline-block;
 }
 .about-footer p {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-align: center;
 }
 .about-footer {
@@ -3502,7 +3501,7 @@ footer li a:hover {
 	text-align: center;
 	display: inline-block;
 	width: 100%;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 .rights p {
 	margin: 0px;
