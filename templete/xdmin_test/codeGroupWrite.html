@@ -10,9 +10,8 @@
 <meta content="" name="keywords">
 
 <!-- Favicons -->
-<link href="assets/img/logo.png" rel="icon">
-<link href="assets/img/logo.png" rel="apple-touch-icon">
-
+<!-- <link href="assets/img/favicon.png" rel="icon"> -->
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -53,12 +52,11 @@
 			<form class="search-form d-flex align-items-center" method="POST" action="#">
 				<!--         <input type="text" name="query" placeholder="Search" title="Enter search keyword">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button> -->
-				<a href="page-code-list.html" class="code-title  d-flex align-items-center"> <span class="d-none d-lg-block nav-link active">코드 관리</span>
-				</a> <a href="page-codeGroup-list.html" class="code-title d-flex align-items-center"> <span class="d-none d-lg-block nav-link">코드 그룹 관리</span>
+				<a href="index.html" class="code-title  d-flex align-items-center"> <span class="d-none d-lg-block nav-link active">코드 관리</span>
+				</a> <a href="index.html" class="code-title d-flex align-items-center"> <span class="d-none d-lg-block nav-link">코드 그룹 관리</span>
 				</a>
 			</form>
 		</div>
-		<!-- End Logo -->
 
 		<div class="search-bar">
 			<form class="search-form d-flex align-items-center" method="POST" action="#">
@@ -230,7 +228,7 @@
 
 		<ul class="sidebar-nav" id="sidebar-nav">
 
-			<li class="nav-item"><a class="nav-link collapsed" href="index.html"> <i class="bi bi-grid"></i> <span>대시보드</span>
+			<li class="nav-item"><a class="nav-link collapsed" href="index.html"> <i class="bi bi-grid"></i> <span>Dashboard</span>
 			</a></li>
 			<!-- End Dashboard Nav -->
 
@@ -342,7 +340,7 @@
 			</a></li>
 			<!-- End Error 404 Page Nav -->
 
-			<li class="nav-item"><a class="nav-link " href="pages-blank.html"> <i class="bi bi-file-earmark"></i> <span>Blank</span>
+			<li class="nav-item"><a class="nav-link collapsed" href="pages-blank.html"> <i class="bi bi-file-earmark"></i> <span>Blank</span>
 			</a></li>
 			<!-- End Blank Page Nav -->
 
@@ -354,12 +352,12 @@
 	<main id="main" class="main">
 
 		<div class="pagetitle">
-			<h1>Blank Page</h1>
+			<h1>코드그룹 관리</h1>
 			<nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-					<li class="breadcrumb-item">Pages</li>
-					<li class="breadcrumb-item active">Blank</li>
+					<li class="breadcrumb-item"><a href="page-code-list.html">코드그룹 목록</a></li>
+					<li class="breadcrumb-item active">코드그룹 관리</li>
 				</ol>
 			</nav>
 		</div>
@@ -367,67 +365,107 @@
 
 		<section class="section">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg">
 
 					<div class="card">
 						<div class="card-body">
-							<div class="container">
-								<div class="col text-center" id="img_form" style="float: left; width: 180px; height: 300px;">
-									<label for="user_profile_img" class="fa-solid fa-file-image fa-5x" id="user_image" style="cursor: pointer;"></label>
-									<input type="file" id="user_profile_img">
+							<form method="post" action="/codeGroup/codeGroupList">
+								<h5 class="card-title fw-bold">코드 등록</h5>
+								<div class="row mt-3 mb-3">
+									<div class="col">
+										<label for="inputId" class="form-label text bold">코드그룹 사용여부</label> <select class="form-select">
+											<option selected>선택</option>
+											<option value="1">Yes</option>
+											<option value="2">No</option>
+										</select>
+									</div>
+									<div class="col"></div>
 								</div>
-								<div class="row">
-									<div class="col-2 p-3">아이디</div>
-									<div class="col p-2">
-										<input class="form-control" type="text" placeholder="ID 입력" id="ID" value="test01">
+								<div class="row mt-3 mb-3">
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">코드그룹 번호</label>
+											<input type="text" class="form-control" placeholder="자동생성" disabled>
+										</div>
 									</div>
-									<div class="col-2 p-3 text center">비밀번호</div>
-									<div class="col p-2">
-										<input class="form-control" type="password" placeholder="Password" id="passwd" value="********" style="width: 100px;">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-2 p-3 text center">이름</div>
-									<div class="col p-2">
-										<input class="form-control" type="text" placeholder="이름" id="name" value="김기역">
-									</div>
-									<div class="col-2 p-3 text center">비밀번호 확인</div>
-									<div class="col d-flex align-items-center p-2">
-										<input class="form-control" type="password" placeholder="Password Check" id="passwdCheck" value="********">
-										<button class="btn btn-primary" type="button" style="float: right;">Check</button>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-2 p-3 text center">E-mail</div>
-									<div class="col p-2">
-										<input class="form-control" type="text" placeholder="Email" id="email" value="giyock01@naver.com">
-									</div>
-									<div class="col-2 p-3 text center">Mobile</div>
-									<div class="col p-2">
-										<input class="form-control" type="text" placeholder="Mobile" id="mobile" value="01011112222">
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">코드그룹 번호(Another)</label>
+											<input type="text" class="form-control">
+										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-2 p-3 text center">우편번호</div>
-									<div class="col p-2 d-flex align-items-center">
-										<input class="form-control" type="text" placeholder="Post Number" id="postNumber" value="06611">
-										<button class="btn btn-primary" type="button" style="float: right;">Find</button>
+								<div class="row mt-3 mb-3">
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">코드그룹 이름 (한글)</label>
+											<input type="text" class="form-control">
+										</div>
 									</div>
-									<div class="col-2 p-3 text center">주소</div>
-									<div class="col p-2">
-										<input class="form-control" type="text" placeholder="Address" id="Address" value="서울 서초구 서초대로 77길 55">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-2 p-3 text center">상세주소</div>
-									<div class="col p-2">
-										<input class="form-control" type="text" placeholder="Detail Address" id="detailAddress" value="에이프로 스퀘어 3층">
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">코드그룹 이름 (영문)</label>
+											<input type="text" class="form-control">
+										</div>
 									</div>
 								</div>
-							</div>
+								<div class="row mt-3 mb-3">
+									<div class="col">
+										<label for="inputId" class="form-label text bold">코드 삭제 여부</label> <select class="form-select">
+											<option selected>선택</option>
+											<option value="1">Yes</option>
+											<option value="2">No</option>
+										</select>
+									</div>
+									<div class="col"></div>
+								</div>
+								<div class="row mt-3 mb-3">
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">설명</label>
+											<textarea class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+									<div class="col"></div>
+								</div>
+								<div class="row mt-3 mb-3">
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">예비1 (varchar type)</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">예비2 (varchar type)</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row mt-3 mb-3">
+									<div class="col">
+										<div class="m-auto">
+											<label for="inputId" class="form-label">예비3 (varchar type)</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col">
+										<div class="m-auto"></div>
+									</div>
+									<div class="row">
+										<div class="text-center mt-3 mb-3">
+											<button type="submit" class="btn btn-success">
+												<i class='bx bxs-save'> 저장</i>
+											</button>
+											<button type="reset" class="btn btn-danger">
+												<i class='bx bx-minus-circle'> 취소</i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
@@ -438,16 +476,14 @@
 	<!-- ======= Footer ======= -->
 	<footer id="footer" class="footer">
 		<div class="copyright">
-			<p>
-				&copy; Copyright <strong><span>Jumal</span></strong>. All Rights Reserved
-			</p>
+			&copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
 		</div>
 		<div class="credits">
 			<!-- All the links in the footer should remain intact. -->
 			<!-- You can delete the links only if you purchased the pro version. -->
 			<!-- Licensing information: https://bootstrapmade.com/license/ -->
 			<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-			<span>Modify by <a href="https://github.com/kiloward96">kiloward96</a></span>
+			Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
 		</div>
 	</footer>
 	<!-- End Footer -->
@@ -466,9 +502,6 @@
 
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
-	
-	<!-- FontAwsome Icon Src -->
-	<script src="https://kit.fontawesome.com/8d31d55045.js" crossorigin="anonymous"></script>
 
 </body>
 
