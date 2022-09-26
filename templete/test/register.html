@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="M_Adnan">
-<title>ECOSHOP - Multipurpose eCommerce HTML5 Template</title>
+<title>Jumal - 즐거운 주말을 위한 Jumal 샵</title>
 
 <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
 <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
@@ -34,6 +34,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<!-- Jquery CDN -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 
 </head>
 <body>
@@ -151,44 +155,47 @@
 							<!-- ESTIMATE SHIPPING & TAX -->
 							<div class="container">
 								<h6>REGISTER</h6>
-								<form>
+								<form id="form" name="form">
+								<input type="hidden" id="AllowedNy" name="AllowedNy">
 									<ul class="row">
 										<!-- ID -->
-										<li class="col-md-5"><label> *ID <input type="text" name="first-name" value="" placeholder="">
+										<li class="col-md-5"><label> *ID <input class="" type="text" name="MBid" value="" placeholder="">
 										</label></li>
 
 										<!-- NAME -->
-										<li class="col-md-5"><label> *NAME <input type="text" name="last-name" value="" placeholder="">
+										<li class="col-md-5"><label> *NAME <input type="text" name="MBname" value="" placeholder="">
 										</label></li>
 
 										<!-- LAST NAME -->
-										<li class="col-md-5"><label> *PASSWORD <input type="password" name="last-name" value="" placeholder="">
+										<li class="col-md-5"><label> *PASSWORD <input type="password" name="MBpassword" value="" placeholder="">
 										</label></li>
 
 										<!-- LAST NAME -->
-										<li class="col-md-5"><label> *PASSWORD CHECK <input type="password" name="last-name" value="" placeholder="">
+										<li class="col-md-5"><label> *PASSWORD CHECK <input type="password" name="MBpasswordCheck" value="" placeholder="">
 										</label></li>
 										<!-- EMAIL ADDRESS -->
-										<li class="col-md-5"><label> *EMAIL ADDRESS <input type="text" name="contry-state" value="" placeholder="">
+										<li class="col-md-5"><label> *EMAIL ADDRESS <input type="text" name="MBemail" value="" placeholder="">
 										</label></li>
 										<!-- PHONE -->
-										<li class="col-md-5"><label> *PHONE <input type="text" name="postal-code" value="" placeholder="">
+										<li class="col-md-5"><label> *PHONE <input type="text" name="MBmobile" value="" placeholder="">
 										</label></li>
-										<li class="col-md-6">
-											<!-- ADDRESS --> <label> *ZIP CODE <input type="text" name="address" value="" placeholder="">
+										<li class="col-md-5">
+											<!-- ADDRESS --> <label> *ZIP CODE <input type="text" name="addressZipCode" value="" placeholder="">
 										</label>
 										</li>
 										<li class="col-md-2"><label>
 												<button type="submit" class="btn" style="margin-top: 25px;">SEARCH</button>
 										</label></li>
-										<li class="col-md-12"><label>*ADDRESS <input type="text" name="address" value="" placeholder="">
+										<li class="col-md-8"><label>*ADDRESS <input type="text" name="addressMain" value="" placeholder="">
 										</label></li>
-										<li class="col-md-12"><label>*DETAIL ADDRESS <input type="text" name="address" value="" placeholder="">
+										<li class="col-md-8"><label>*DETAIL ADDRESS <input type="text" name="addressDetail" value="" placeholder="">
+										</label></li>
+										<li class="col-md-8"><label>*REFERENCE ADDRESS <input type="text" name="addressMore" value="" placeholder="">
 										</label></li>
 
 										<!-- PHONE -->
 										<li class="d-flex justify-content-center col-md-6">
-											<button type="submit" class="btn">REGISTER NOW</button>
+											<button type="button" class="btn" id="btnSave" name="btnSave">REGISTER NOW</button>
 										</li>
 									</ul>
 								</form>
@@ -243,5 +250,45 @@
 	<script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/main.js"></script>
+<script type="text/javascript">
+$("#MBid").on("focusout", function(){
+	
+	$.ajax({
+		async: true 
+		,cache: false
+		,type: "post"
+		/* ,dataType:"json" */
+		,url: "./register.html"
+		/* ,data : $("#formLogin").serialize() */
+		,data : { "MBid" : $("#MBid").val() }
+		,success: function(response) {
+			if(response.rt == "success") {
+				document.getElementById("MBid").classList.remove('is-invalid');
+				document.getElementById("MBid").classList.add('is-valid');
+
+				document.getElementById("IdFeedback").classList.remove('invalid-feedback');
+				document.getElementById("IdFeedback").classList.add('valid-feedback');
+				document.getElementById("IdFeedback").innerText = "사용 가능 합니다.";
+				
+				document.getElementById("AllowedNy").value = 1;
+				
+			} else {
+				document.getElementById("MBid").classList.remove('is-valid');
+				document.getElementById("MBid").classList.add('is-invalid');
+				
+				document.getElementById("IdFeedback").classList.remove('valid-feedback');
+				document.getElementById("IdFeedback").classList.add('invalid-feedback');
+				document.getElementById("IdFeedback").innerText = "사용 불가능 합니다";
+				
+				document.getElementById("AllowedNy").value = 0;
+			}
+		}
+		,error : function(jqXHR, textStatus, errorThrown){
+			alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+		}
+	});
+
+});
+</script>
 </body>
 </html>
