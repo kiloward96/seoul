@@ -41,45 +41,6 @@
 
 </head>
 <body>
-	<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="M_Adnan">
-<title>Jumal - 즐거운 주말을 위한 Jumal 샵</title>
-
-<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-
-<!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="css/ionicons.min.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
-
-<!-- JavaScripts -->
-<script src="js/modernizr.js"></script>
-
-<!-- Online Fonts -->
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-</head>
-<body>
 
 	<!-- Wrap -->
 	<div id="wrap">
@@ -156,7 +117,7 @@
 							<div class="container">
 								<h6>REGISTER</h6>
 								<form id="form" name="form">
-								<input type="hidden" id="AllowedNy" name="AllowedNy">
+									<input type="hidden" id="AllowedNy" name="AllowedNy">
 									<ul class="row">
 										<!-- ID -->
 										<li class="col-md-5"><label> *ID <input class="" type="text" name="MBid" value="" placeholder="">
@@ -174,7 +135,11 @@
 										<li class="col-md-5"><label> *PASSWORD CHECK <input type="password" name="MBpasswordCheck" value="" placeholder="">
 										</label></li>
 										<!-- EMAIL ADDRESS -->
-										<li class="col-md-5"><label> *EMAIL ADDRESS <input type="text" name="MBemail" value="" placeholder="">
+										<li class="col-md-4"><label> *EMAIL ADDRESS <input type="text" id="MBemail" name="MBemail">
+										</label></li>
+
+										<li class="col-md-5"><label>
+												<button type="button" class="btn" style="margin-top: 25px;">인증번호 발송</button>
 										</label></li>
 										<!-- PHONE -->
 										<li class="col-md-5"><label> *PHONE <input type="text" name="MBmobile" value="" placeholder="">
@@ -250,7 +215,7 @@
 	<script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/main.js"></script>
-<script type="text/javascript">
+	<script type="text/javascript">
 $("#MBid").on("focusout", function(){
 	
 	$.ajax({
