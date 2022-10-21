@@ -38,7 +38,7 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
@@ -67,43 +67,24 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	
 
 	</head>
 	<body>
-
-		<!-- <div id="fh5co-home" class="js-fullheight" data-section="home">
-
-			<div class="flexslider">
-				<div class="fh5co-overlay"></div>
-				<div class="fh5co-text">
-					<div class="container">
-						<div class="row">
-							<h1 class="to-animate">foodee</h1>
-							<h2 class="to-animate">Lovely Designed <span>by</span> <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-						</div>
-					</div>
-				</div>
-			  	<ul class="slides">
-			   	<li style="background-image: url(images/slide_1.jpg);" data-stellar-background-ratio="0.5"></li>
-			   	<li style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5"></li>
-			   	<li style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5"></li>
-			  	</ul>
-		  	</div> -->
-		</div>
 		
 		<div class="js-sticky">
 					<div class="fh5co-main-nav">
 						<div class="container-fluid">
 							<div class="row">
 								<div class="col fh5co-logo">
-									<a href="index.html">foodee</a>
+									<a class="dodam-logo" href="index.html"><img class="dodam-logo" alt="Main" src="images/logo-header.png"" ></a>
 								</div>
 								<div class="col"></div>
 								<div class="col fh5co-menu-2">
 									<a href="#" class="" data-nav-section="features">Login</a>
 									<a href="#" class="d-none">Hello ${userId}</a>
 									<a href="#" data-nav-section="events">Space</a>
-									<a href="#" data-nav-section="reservation">Space Board</a>
+									<a href="#" data-nav-section="Board">Space Board</a>
 								</div>
 							</div>
 						</div>
@@ -112,67 +93,93 @@
 				</div>
 			</div>
 
-		<div id="fh5co-contact" data-section="reservation">
+		<div id="fh5co-contact" data-section="Board">
 			<div class="container">
-				<div class="row text-center fh5co-heading row-padded">
-					<div class="col-md-8 col-md-offset-2">
-						<h2 class="heading to-animate">Reserve a Table</h2>
-						<p class="sub-heading to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 to-animate-2">
-						<h3>Contact Info</h3>
-						<ul class="fh5co-contact-info">
-							<li class="fh5co-contact-address ">
-								<i class="icon-home"></i>
-								5555 Love Paradise 56 New Clity 5655, <br>Excel Tower United Kingdom
-							</li>
-							<li><i class="icon-phone"></i> (123) 465-6789</li>
-							<li><i class="icon-envelope"></i>info@freehtml5.co</li>
-							<li><i class="icon-globe"></i> <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></li>
-						</ul>
-					</div>
-					<div class="col-md-6 to-animate-2">
-						<h3>Reservation Form</h3>
-						<div class="form-group ">
-							<label for="name" class="sr-only">Name</label>
-							<input id="name" class="form-control" placeholder="Name" type="text">
-						</div>
-						<div class="form-group ">
-							<label for="email" class="sr-only">Email</label>
-							<input id="email" class="form-control" placeholder="Email" type="email">
-						</div>
-						<div class="form-group">
-							<label for="occation" class="sr-only">Occation</label>
-							<select class="form-control" id="occation">
-								<option>Select an Occation</option>
-							  <option>Wedding Ceremony</option>
-							  <option>Birthday</option>
-							  <option>Others</option>
-							</select>
-						</div>
-						<div class="form-group ">
-							<label for="date" class="sr-only">Date</label>
-							<input id="date" class="form-control" placeholder="Date &amp; Time" type="text">
-						</div>
-
-
-							
-						<div class="form-group ">
-							<label for="message" class="sr-only">Message</label>
-							<textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-						</div>
-						<div class="form-group ">
-							<input class="btn btn-primary" value="Send Message" type="submit">
-						</div>
-						</div>
+			<div class="row text-center fh5co-heading row-padded d-flex justify-content-center">
+				<div class="col-md-8 col-md-offset-2">
+					<h2 class="heading to-animate">스페이스 게시판</h2>
+					<p class="sub-heading to-animate">다른 그룹의 추억을 보시려면 키워드를 선택하세요</p>
+					<p class="sub-heading to-animate">키워드는 여러개 선택 가능합니다</p>
 				</div>
 			</div>
-		</div>
+			<div class="row border rounded-5 p-5 shadow">
+				<!-- <div class="col-md-6 to-animate-2"> -->
+				<div class="col-md-12 to-animate-2 mb-5">
+					<h3>여행 테마 선택</h3>
+					<div class="row to-animate-1 border rounded-5 p-5 shadow">
+						<div class="tag-group d-flex justify-content-center" role="group1">
+							<input type="checkbox" class="btn-check" id="test1" autocomplete="off">
+							<label class="btn btn-tag shadow" for="test1"><i class="theme-tag icon-social-dropbox"></i>식도락</label>
 
-		
-	</div>
+							<input type="checkbox" class="btn-check" id="test2" autocomplete="off">
+							<label class="btn btn-tag shadow" for="test2"><i class="theme-tag icon-social-dropbox"></i>액티비티</label>
+
+							<input type="checkbox" class="btn-check" id="test3" autocomplete="off">
+							<label class="btn btn-tag shadow" for="test3"><i class="theme-tag icon-social-dropbox"></i>호캉스</label>
+							
+							<input type="checkbox" class="btn-check" id="test4" autocomplete="off">
+							<label class="btn btn-tag shadow" for="test4"><i class="theme-tag icon-social-dropbox"></i>반려동물</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 to-animate-2 mb-5">
+					<h3>여행 지역 선택</h3>
+					<div class="row to-animate-1 border rounded-5 p-5 shadow">
+						<div class="region-group d-flex justify-content-center" role="group2">
+							<input type="checkbox" class="btn-check" id="btncheck1">
+							<label class="btn btn-tag" for="btncheck1">서울</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck2">
+							<label class="btn btn-tag" for="btncheck2">경기</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck3">
+							<label class="btn btn-tag" for="btncheck3">강원</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck4">
+							<label class="btn btn-tag" for="btncheck4">인천</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck5">
+							<label class="btn btn-tag" for="btncheck5">대전</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck6">
+							<label class="btn btn-tag" for="btncheck6">대구</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck7">
+							<label class="btn btn-tag" for="btncheck7">부산</label>
+						</div>
+						<div class="region-group d-flex justify-content-center" role="group3">
+
+							<input type="checkbox" class="btn-check" id="btncheck8">
+							<label class="btn btn-tag" for="btncheck8">경북</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck9">
+							<label class="btn btn-tag" for="btncheck9">경남</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck10">
+							<label class="btn btn-tag" for="btncheck10">전북</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck11">
+							<label class="btn btn-tag" for="btncheck11">전남</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck12">
+							<label class="btn btn-tag" for="btncheck10">전북</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck13">
+							<label class="btn btn-tag" for="btncheck11">전남</label>
+
+							<input type="checkbox" class="btn-check" id="btncheck14">
+							<label class="btn btn-tag" for="btncheck12">제주</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 to-animate-2 d-flex justify-content-center">
+					<button type="button" class="btn btn-primary shadow w-25">스페이스 보러가기</button>
+				</div>
+				
+				</div>
+			</div>
+
+			</div>
 
 	<div id="fh5co-footer">
 		<div class="container">
@@ -223,6 +230,7 @@
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
 
+	
 	</body>
 </html>
 

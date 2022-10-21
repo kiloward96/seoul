@@ -1,12 +1,22 @@
-@font-face {
+/* @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
+} */
+
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'SUIT-Medium';
 }
 body {
-  font-family: "Merriweather", serif;
+  font-family: 'SUIT-Medium', serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 2;
@@ -27,7 +37,8 @@ a:hover, a:focus, a:active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  /* font-family: 'Nanum Pen Script', cursive; */
   color: #000;
 }
 
@@ -38,11 +49,10 @@ p {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Playfair Display", serif;
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -211,7 +221,7 @@ p {
   font-family: "Playfair Display", serif;
   font-size: 300px;
   font-weight: 700;
-  font-style: italic;
+  /* font-style: italic; */
   color: #fff;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -241,7 +251,7 @@ p {
 }
 #fh5co-home .flexslider .fh5co-text h2 span {
   font-family: "Playfair Display", serif;
-  font-style: italic;
+  /* font-style: italic; */
   text-transform: none;
 }
 #fh5co-home .flexslider .fh5co-text h2 a {
@@ -299,13 +309,14 @@ p {
 }
 .fh5co-main-nav .fh5co-menu-1 a,
 .fh5co-main-nav .fh5co-menu-2 a,
-.fh5co-main-nav .fh5co-logo a {
+.fh5co-main-nav .fh5co-logo a:not(.dodam-logo) {
   padding: 35px 10px;
   color: #130d08;
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
   *display: inline;
+  text-decoration-line: none;
 }
 .fh5co-main-nav .fh5co-menu-1 a:hover, .fh5co-main-nav .fh5co-menu-1 a:focus, .fh5co-main-nav .fh5co-menu-1 a:active,
 .fh5co-main-nav .fh5co-menu-2 a:hover,
@@ -317,6 +328,7 @@ p {
   outline: none;
   text-decoration: none;
 }
+
 .fh5co-main-nav .fh5co-menu-1 a.active,
 .fh5co-main-nav .fh5co-menu-2 a.active,
 .fh5co-main-nav .fh5co-logo a.active {
@@ -335,7 +347,7 @@ p {
   font-size: 40px;
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-style: italic;
+  /* font-style: italic; */
 }
 .fh5co-main-nav .fh5co-logo a {
   position: relative;
@@ -349,7 +361,7 @@ p {
 
 .fh5co-heading .heading {
   font-size: 50px;
-  font-style: italic;
+  /* font-style: italic; */
   position: relative;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -799,7 +811,7 @@ p {
 }
 #fh5co-menus .fh5co-food-menu h2 {
   margin-bottom: 50px;
-  font-style: italic;
+  /* font-style: italic; */
   position: relative;
 }
 #fh5co-menus .fh5co-food-menu h2.fh5co-drinks {
@@ -989,7 +1001,7 @@ p {
 }
 #fh5co-contact h3 {
   margin-bottom: 30px;
-  font-style: italic;
+  /* font-style: italic; */
 }
 @media screen and (max-width: 768px) {
   #fh5co-contact {
@@ -1005,7 +1017,6 @@ p {
   width: 61px;
   position: absolute;
   content: "";
-  background: url(../images/0203-coffee-love.png) no-repeat;
   top: 0;
   left: 50%;
   margin-top: -50px;
@@ -1307,7 +1318,7 @@ p {
 }
 #fh5co-type h3 {
   margin-bottom: 30px;
-  font-style: italic;
+  /* font-style: italic; */
   color: #fff;
   font-size: 40px;
   text-align: center;
@@ -1356,3 +1367,45 @@ p {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* add css 221020 */
+img.dodam-logo{
+	padding: 4px;
+	height: 70px;
+}
+
+i.theme-tag {
+	font-size: 30px;
+}
+
+.btn-tag {
+	width: 200px;
+}
+
+.space-tag {
+	background-color: #ffc107;
+	border-style: 1px solid white rounded;
+	padding: 15px;
+	border-radius: 1em;
+}
+.spaceFlag {
+	float: right;
+}
+
+/* star rate s */
+.star{
+    font-size: 30px;
+    color:#cfcfcf;
+    display: inline-block;
+}
+.over{
+    color:#f7c56a;
+}
+.fix{
+    color:#ffa600;
+}
+.rating{
+    margin: 30px 0;
+    font-weight:bold;
+}
+/* star rate e */
