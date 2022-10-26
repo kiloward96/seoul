@@ -1179,7 +1179,7 @@ p {
 .js-sticky {
   display: block;
   position: sticky;
-  z-index: 9999;
+  z-index: 600;
 }
 @media screen and (max-width: 768px) {
   .js-sticky {
@@ -1267,7 +1267,7 @@ p {
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 9999;
+  z-index: 600;
   display: block;
   margin: 0 auto;
   display: none;
@@ -1391,21 +1391,3 @@ i.theme-tag {
 .spaceFlag {
 	float: right;
 }
-
-/* star rate s */
-.star{
-    font-size: 30px;
-    color:#cfcfcf;
-    display: inline-block;
-}
-.over{
-    color:#f7c56a;
-}
-.fix{
-    color:#ffa600;
-}
-.rating{
-    margin: 30px 0;
-    font-weight:bold;
-}
-/* star rate e */

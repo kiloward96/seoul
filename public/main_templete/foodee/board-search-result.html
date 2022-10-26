@@ -69,7 +69,198 @@
 	<![endif]-->
 	
 	<!-- star rate s -->
-	
+	<style type="text/css">
+	* {
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'SUIT-Medium';
+}
+
+img {
+	max-width: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+hr {
+	background: #eeeeee;
+	height: 1px;
+	border: 0;
+	margin-bottom: 30px;
+}
+
+.addr {
+	color: tomato;
+}
+
+.container-box {
+	width: 100%;
+	height: 1000px;
+	background-color: #fff;
+	display: flex;
+	overflow: hidden;
+	border-radius: 20px;
+	font-size: 15px;
+	border: 3px solid #424242;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.sidebar {
+	width: 220px;
+	display: flex;
+	flex-direction: column;
+	border-right: 2px solid #000;
+	background: #fff;
+}
+
+.sidebar_logo {
+	margin-left: 30px;
+	margin-top: 15px;
+	text-decoration: none;
+	width: 150px;
+	height: 50px;
+	overflow: hidden;
+}
+
+.sidebar_logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.side_menu_list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	padding-left: 0;
+	font-size: 14px;
+	font-weight: lighter;
+}
+
+.side_menu p {
+	margin: 40px 0px 0px 0px;
+	font-size: 8px
+}
+
+.menuWrap {
+	float: left;
+}
+
+.side_menu_list p {
+	font-weight: bold;
+	font-size: 8px;
+}
+
+.side_menu_list a {
+	text-decoration: none;
+	color: #000;
+}
+
+.menu_btn {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+}
+
+.menu_btn a {
+	color: #000;
+}
+
+.setting-wrap {
+	display: flex;
+	align-items: flex-end;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	color: #fff;
+	background: #000;
+}
+
+.fontwrap {
+	display: flex;
+}
+
+.fontwrap p {
+	margin-left: 15px;
+}
+
+.user_profile {
+	margin: 50px auto 0px auto;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.profile-img {
+	width: 100%;
+	height: 100%;
+}
+
+.menu_item {
+	width: 218px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu_item:hover {
+	background: #000;
+	color: #fff;
+}
+
+.space_wrap {
+	display: flex;
+	width: 13%;
+	height: 50px;
+	border: 1px solid #000;
+	background: #fff;
+	border-radius: 15px;
+	align-items: center;
+	padding-left: 20px;
+	margin-left: auto;
+	color: #000;
+}
+
+.user_count {
+	font-size: 14px;
+	color: #01579b;
+}
+
+.user-img {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	object-fit: cover;
+	border: 1px solid #000;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.user-name {
+	font-size: 14px;
+	margin: 0 6px 0 12px;
+}
+</style>
 	
 	<!-- star rate e -->
 
@@ -114,7 +305,7 @@
 				<div class="card card-body border-0 to-animate-2">
 				
 					<!-- search box sector 221021 s -->
-					<div class="row border rounded-5 p-5 shadow">
+					<div class="row rounded-5 p-5 shadow">
 						<!-- <div class="col-md-6 to-animate-2"> -->
 						<div class="col-md-12 to-animate-2 mb-5">
 							<h3>여행 테마 선택</h3>
@@ -194,60 +385,57 @@
 			</div>
 
 
-			<!-- search result sector 221021 s -->
-			<div class="container">
+		<!-- search result sector 221021 s -->
+			
+		<!-- c:foreach 사용예정 -->
+		<div class="container">
 			<div class="row rounded-5 p-5 m-5 shadow to-animate">
-				<div class="col-md-12 col-md-offset-2">
-				<!-- c:foreach 사용예정 -->
-					<div class="row to-animate">
-						<div class="col-md-6">
-							<h4 class="heading to-animate">#{memberId} 님의 스페이스</h4>
-						</div>
-						<div class="col-md-6">
-							<span>추억 #{SpaceFlagCount}개</span>
-						</div>
+				<div class="row to-animate mt-3 mb-3">
+					<div class="col-md-6">
+						<h4 class="heading to-animate" style="cursor: pointer;"> <a href="Preview-page.html">☆★상남자들 강원도 여행★☆</a></h4>
 					</div>
-					<div class="row to-animate m-4">
-						<div class="col-md-6">
-							<span>여행 인원 #{memberCount}명</span>
-						</div>
-						<div class="col-md-6">
-							만족도
-							<ul class="text-center">
-          <li class="star"><i class="fas fa-star"></i></li>
-          <li class="star"><i class="fas fa-star"></i></li>
-          <li class="star"><i class="fas fa-star"></i></li>
-          <li class="star"><i class="fas fa-star"></i></li>
-          <li class="star"><i class="fas fa-star"></i></li>
-      </ul></div>
-						</div>
-					</div>
-					<div class="row to-animate">
-						<div class="col-2"><p class="sub-heading to-animate d-block">여행 테마</p></div>
-						<div class="col-md-10">
-						
-						<span class="space-tag shadow-sm"><i class="theme-tag icon-social-dropbox"></i>식도락</span>
+					<div class="col-md-2">여행 인원</div>
+					<div class="col-md-4">#{memberID}외 5 명</div>
+				</div>
 
-						<span class="space-tag shadow-sm" disabled><i class="theme-tag icon-social-dropbox"></i>액티비티</span>
-						</div>
+				<div class="row to-animate mt-3 mb-3">
+					<div class="col-2">
+						<p class="sub-heading to-animate d-block">여행 테마</p>
 					</div>
-					<div class="row to-animate">
-						<div class="col-2"><p class="sub-heading to-animate d-block">여행 장소</p></div>
-						<div class="col-md-10">
-						<span class="space-tag shadow-sm">강원</span>
+					<div class="col-md-4">
+						<span class="space-tag shadow-sm me-2"><i class="theme-tag icon-social-dropbox"></i>식도락</span> <span class="space-tag shadow-sm"><i class="theme-tag icon-social-dropbox"></i>액티비티</span>
+					</div>
+					<div class="col-2">
+						<p class="sub-heading to-animate">여행 장소</p>
+					</div>
+					<div class="col-md-4">
+						<span class="space-tag shadow-sm me-2">강원</span>
+						<span class="space-tag shadow-sm">경기</span>
+					</div>
+				</div>
+				<div class="row to-animate">
+					<div class="col-md-6">
+						<span>추억 #{SpaceFlagCount}개</span>
+					</div>
+					<div class="col-md-2">
+						<span>스페이스 만족도</span>
+					</div>
+					<div class="col-md-4">
+						<div class="progress border shadow-sm">
+							<div class="progress-bar bg-success" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width: 83%; background-color: rgb(52, 125, 241);"></div>
+						</div>
+						<div class="col-2 justify-content-end" style="font-size: 0.8rem;">
+							<span>83%</span>
 						</div>
 					</div>
 				</div>
-				<!-- c:foreach 사용예정 -->
-
 			</div>
-			</div>
-
-			<!-- search result sector 221021 e -->
-
-			
-			<!-- container close 221021 -->
 		</div>
+			<!-- c:foreach 사용예정 -->
+			<!-- search result sector 221021 e -->
+			<!-- container close 221021 -->
+	</div>
+
 
 
 	<div id="fh5co-footer">
@@ -298,50 +486,6 @@
 	</script>
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
-	
-	<script type="text/javascript">
-	const stars = document.querySelectorAll(".star");
-	const rating = document.querySelector(".rating");
-
-	for(let i = 0; i < stars.length; i++) {
-	    stars[i].starValue = ( i + 1);
-	    ["mouseover","mouseout", "click"].forEach(function (e){
-	        stars[i].addEventListener(e, starRate);
-	    })
-	}
-
-	function starRate(e){
-	    let type = e.type;
-	    let starValue = this.starValue;
-	    if(type ==="click"){
-	        if (starValue > 1){
-	            rating.innerHTML = "You rated this" + starValue + "stars";
-	        }
-	    }
-	    stars.forEach(function (ele, ind){
-	        if (type === "click"){
-	            if ( ind < starValue){
-	                ele.classList.add("fix");
-	            }
-	            else{
-	                ele.classList.remove("fix");
-	            }
-	        }
-	        if(type === "mouseover"){
-	            if(ind < starValue){
-	                ele.classList.add("over");
-	            }
-	            else{
-	                ele.classList.remove("over");
-	            }
-	        }
-	        if (type === "mouseout"){
-	            ele.classList.remove("over");
-	        }
-	    })
-	}
-	</script>
-
 	</body>
 </html>
 
